@@ -1,0 +1,31 @@
+# Bytecode / Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebungen
+venv/
+env/
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+
+# Persönliche Daten / Keys
+
+
+# JSON-Daten (Output-Dateien)
+*.json
+
+# Textdokumentation (optional)
+*.txt
+!requirements.txt
+!keys/shodan_key.txt
+!keys/dehashed_key.txt
+!keys/password.txt
+!plugins/email/tlds-alpha-by-domains.txt
+
+# Git
+.git
+.gitignore

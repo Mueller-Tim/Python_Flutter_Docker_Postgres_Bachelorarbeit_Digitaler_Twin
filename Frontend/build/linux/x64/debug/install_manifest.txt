@@ -1,0 +1,14 @@
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/digitaltwin
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/lib/libfile_saver_plugin.so
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/NativeAssetsManifest.json
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/tim/Desktop/BA_Digital_Twin_Mueller_Thavalingam/Frontend/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag

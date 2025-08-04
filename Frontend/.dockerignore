@@ -1,0 +1,24 @@
+# Temporäre Build- und Tool-Verzeichnisse
+build/
+.dart_tool/
+.packages
+
+# IDE & Editor
+.idea/
+.vscode/
+.metadata
+
+# Native Plattformen (nicht nötig bei Web)
+android/
+ios/
+macos/
+windows/
+linux/
+
+# Git
+.git
+.gitignore
+
+# Sonstige Systemdateien
+.DS_Store
+Thumbs.db

@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+requests
+shodan
+python-whois
+psycopg2-binary
+dnspython

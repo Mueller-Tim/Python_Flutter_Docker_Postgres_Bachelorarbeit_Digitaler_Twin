@@ -1,0 +1,71 @@
+################################################################################
+# docker-compose.yml
+#
+# Startet die komplette “Digital Twin”-Suite:
+#   • backend   – FastAPI-Server (Python 3.11-slim)           → :8000
+#   • frontend  – Flutter-Web-Build, ausgeliefert via NGINX   → :8080
+#   • db        – PostgreSQL 15 mit persistentem Volume
+#
+# Alle Passwörter & Ports sind **nur für Demo-Zwecke** fest im Klartext
+# hinterlegt.  In Produktion bitte ❶ .env-Datei nutzen oder ❷ Secrets
+# des Orchestrators (Docker Secrets, Kubernetes Secrets, …).
+################################################################################
+version: '3.9'
+
+services:
+  ##############################################################################
+  # 1) FastAPI-Backend
+  ##############################################################################
+  backend:
+    build: ./Backend          # Pfad zu Dockerfile (siehe vorherige Antwort)
+    container_name: backend
+    ports:
+      - '8000:8000'           # Host:Container
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: mydatabase
+      DB_USER: postgres
+      DB_PASSWORD: mysecretpassword
+    depends_on:
+      - db                    # wartet, bis Postgres Health-Check OK ist
+    restart: unless-stopped
+
+  ##############################################################################
+  # 2) Flutter-Frontend (statisches Build unter NGINX)
+  ##############################################################################
+  frontend:
+    build: ./Frontend         # Multi-Stage Dockerfile (Flutter → NGINX)
+    container_name: frontend
+    ports:
+      - '8080:80'             # Web-Port für Browser
+    depends_on:
+      - backend               # stellt sicher, dass API erreichbar ist
+    restart: unless-stopped
+
+  ##############################################################################
+  # 3) PostgreSQL 15
+  ##############################################################################
+  db:
+    image: postgres:15
+    container_name: db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:               # optional: Wartebedingung für backend
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+##############################################################################
+# Benannte Volumes
+##############################################################################
+volumes:
+  pgdata:                      # Persistente DB-Daten (~/docker/volumes/pgdata)
